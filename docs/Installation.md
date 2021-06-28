@@ -59,4 +59,4 @@ click on save.
 
 Open your asset in which the OEE settings have been made.
 
-
+<p align="center"><kbd><img src="graphics/Performance_Insight_OEE_Dashboard.PNG" /></kbd></p>
