@@ -1,6 +1,7 @@
 # Performance Insight OEE analysis
 
-This example shows how to use the Industrial Edge App "Performance Insight" with it´s embedded OEE dashboard to present the productivity of a plnat transparently.
+This example shows how to use the Industrial Edge App "Performance Insight" with it´s embedded OEE dashboard to present the productivity of a plant transparently.
+
 - [Performance Insight OEE analysis](#performance-insight-oee-analysis)
   - [Description](#description)
     - [Overview](#overview)
@@ -21,7 +22,7 @@ This example shows how to use the Industrial Edge App "Performance Insight" with
 ### Overview
 
 This document describes how to create a Performance insight OEE analysis dashboard.
-With the key figure of Overall Equipment Effectiveness (OEE), you can calculate the productivity of a plant or its losses and display them transparently using the Gantt widget. The OEE widgets is predefined, only a few parameters have to be defined in the OEE settings.
+With the key figure of Overall Equipment Effectiveness (OEE), you can calculate the productivity of a plant or its losses and display them transparently using the Gantt widget. The OEE widgets are predefined, only a few parameters have to be defined in the OEE settings.
 
 The overall equipment effectiveness of a plant is defined as the product of the following three factors:
 - Availability factor (e.g. whether there are fault times)
@@ -33,7 +34,7 @@ The overall equipment effectiveness of a plant is defined as the product of the 
 ### General task
 
 This example is a supplement to Performance Insight getting started see [performance-insight-getting-started](https://github.com/industrial-edge/performance-insight-getting-started).
-For the Performance Insight OEE analysis, this current TIA project is required.
+For the Performance Insight OEE analysis, [this](#tia-project) TIA project is required.
 In Performance Insight, the OEE analysis settings are configured and then displayed as a dashboard.
 
 ## Requirements
@@ -65,7 +66,7 @@ The used TIA Portal project can be found in the [miscellenous repository](https:
 
 ## Configuration steps
 
-You can find the further information about the following steps in the [docs](docs/Installation.md)
+You can find further information about the following steps [here](docs/Installation.md)
 - Configure Data Service
 - Configure Performance Insight
 - Display OEE dashboard
