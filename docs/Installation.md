@@ -47,7 +47,7 @@ Open Asset Configuration in the respective asset and define OEE settings.
 
 <p align="center"><kbd><img src="graphics/Performance_Insight_define_OEE_settings.PNG" /></kbd></p>
 
-- Select the created machine status under "status mapping
+- Select the created machine status as status mapping
 
 - Select the machine status variable "GDB_operate_machineState"
 
