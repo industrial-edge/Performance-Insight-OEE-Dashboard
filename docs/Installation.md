@@ -11,7 +11,7 @@
 
 ## Configure Data Service
 
-Create a new Add asset with the following variables in the Data Service that is needed later for the OEE settings.
+Create a new asset with the following variables in the Data Service to collect all needed data.
 
 <p align="center"><kbd><img src="graphics/Data_Service_Variables.PNG" /></kbd></p>
 
@@ -19,7 +19,7 @@ Create a new Add asset with the following variables in the Data Service that is 
 
 ### Configure status mapping
 
-Open the Performance Insight status mapping and create new status mapping.
+Open the Performance Insight status mapping and create a new status mapping which is needed later for the OEE settings.
 
 <p align="center"><kbd><img src="graphics/Performance_Insight_machine_status.PNG" /></kbd></p>
 
@@ -33,7 +33,7 @@ Create two new KPI types to calculate the "theoretical speed" and the "good coun
 
 ### Configure Parameter
 
-Open the parameters in the respective asset and create two new KPI instances.
+Open the parameters in the respective asset and create two new KPI instances for "theoretical speed" and "good count".
 
 <p align="center"><kbd><img src="graphics/Performance_Insight_parameter_good_count.PNG" /></kbd></p>
 
@@ -47,18 +47,18 @@ Open Asset Configuration in the respective asset and define OEE settings.
 
 <p align="center"><kbd><img src="graphics/Performance_Insight_define_OEE_settings.PNG" /></kbd></p>
 
-- select the created machine status under "status mapping
+- Select the created machine status under "status mapping
 
 - Select the machine status variable "GDB_operate_machineState"
 
-- select the respective variables and created KPI types
+- Select the respective variables and created KPI types
 
+- Click on save
+ 
 <p align="center"><kbd><img src="graphics/Performance_Insight_OEE_settings.PNG" /></kbd></p>
-
-click on save.
 
 ## Display OEE dashboard
 
-Open your asset in which the OEE settings have been made and select the tab "OEE".
+Open your asset in which the OEE settings have been made and select the tab "OEE". Choose a proper time range within the dashboard for which data is definitely available.
 
 <p align="center"><kbd><img src="graphics/Performance_Insight_OEE_Dashboard.PNG" /></kbd></p>
