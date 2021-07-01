@@ -33,7 +33,7 @@ Create two new KPI types to calculate the "theoretical speed" and the "good coun
 
 ### Configure Parameter
 
-Open the parameters in the respective asset and create two new KPI instances:
+Open the parameters in the respective asset and create two new KPI instances.
 
 <p align="center"><kbd><img src="graphics/Performance_Insight_parameter_good_count.PNG" /></kbd></p>
 
