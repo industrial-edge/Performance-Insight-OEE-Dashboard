@@ -34,7 +34,7 @@ The overall equipment effectiveness of a plant is defined as the product of the 
 ### General task
 
 This example is a supplement to Performance Insight getting started see [performance-insight-getting-started](https://github.com/industrial-edge/performance-insight-getting-started).
-For the Performance Insight OEE analysis, [this](#tia-project) current TIA project is required.
+For the Performance Insight OEE analysis, [this](#tia-project) TIA project is required.
 In Performance Insight, the OEE analysis settings are configured and then displayed as a dashboard.
 
 ## Requirements
