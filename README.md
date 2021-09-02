@@ -88,3 +88,4 @@ Thanks for your interest in contributing. Anybody is free to report bugs, unclea
 ## Licence and Legal Information
 
 Please read the [Legal information](LICENSE.md).
+
