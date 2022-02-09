@@ -49,9 +49,9 @@ In Performance Insight, the OEE analysis settings are configured and then displa
 
 - Industrial Edge Management (IEM) V1.2.16 (OS) V1.2.0-36
   - IE Databus V1.2.16
-  - IE Databus Configurator V1.2.23
+  - IE Databus Configurator V1.2.29
   - S7 Connector V1.2.26
-  - S7 Connector Configurator V1.2.32
+  - S7 Connector Configurator V1.2.38
   - Data Service V1.2.0
   - Performance Insight V1.2.1
 - Industrial Edge Device V 1.2.0-56
