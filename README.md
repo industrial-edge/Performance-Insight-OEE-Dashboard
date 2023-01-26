@@ -10,12 +10,11 @@ This example shows how to use the Industrial Edge App "Performance Insight" with
     - [Prerequisities](#prerequisities)
     - [Used components](#used-components)
     - [TIA Project](#tia-project)
-  - [Configuration steps](#configuration-steps)
+  - [Configuration](#configuration)
   - [Usage](#usage)
   - [Documentation](#documentation)
   - [Contribution](#contribution)
   - [Licence and Legal Information](#licence-and-legal-information)
-
 
 ## Description
 
@@ -39,22 +38,23 @@ In Performance Insight, the OEE analysis settings are configured and then displa
 
 ## Requirements
 
-###  Prerequisities
+### Prerequisities
 
 - Access to an Industrial Edge Management System (IEM)
 - Onboarded Industial Edge Device on IEM
 - Performance Insight getting started [performance-insight-getting-started](https://github.com/industrial-edge/performance-insight-getting-started)
+- Google Chrome (Version ≥ 72)
 
 ### Used components
 
-- Industrial Edge Management (IEM) V1.2.16 (OS) V1.2.0-36
-  - IE Databus V1.2.16
-  - IE Databus Configurator V1.2.29
-  - S7 Connector V1.2.26
-  - S7 Connector Configurator V1.2.38
-  - Data Service V1.2.0
-  - Performance Insight V1.2.1
-- Industrial Edge Device V 1.2.0-56
+- Industrial Edge Management (IEM) V1.5.2-4 / V1.10.3
+  - IE Databus V 1.8.2-2
+  - IE Databus Configurator V 1.8.2-2
+  - OPC UA Connector V 1.8.1-6
+  - Common Connector Configurator V 1.8.1-4
+  - Data Service V 1.5.0
+  - Performance Insight V 1.6.2
+- Industrial Edge Device V 1.9.0-27
 - TIA Portal V16
 - CPU 1511-1 PN
 
@@ -62,12 +62,13 @@ In Performance Insight, the OEE analysis settings are configured and then displa
 
 The used TIA Portal project can be found in the [miscellenous repository](https://github.com/industrial-edge/miscellaneous/tree/main/tank%20application) and is also used for several further application examples.
 
-## Configuration steps
+## Configuration
 
-You can find further information about the following steps [here](docs/Installation.md)
-- Configure Data Service
-- Configure Performance Insight
-- Display OEE dashboard
+You can find further information about the following steps in the [Configuration](/docs/Installation.md) documentation:
+
+- [Configure Data Service](/docs/Installation.md#configure-data-service)
+- [Configure Performance Insight](/docs/Installation.md#configure-performance-insight)
+- [Display OEE dashboard](/docs/Installation.md#display-oee-dashboard)
 
 ## Usage
 
@@ -76,11 +77,13 @@ Performance Insight visualises this data in an OEE dashboard.
 
 ## Documentation
 
-You can find further documentation and help in the following links
-  - [Industrial Edge Hub](https://iehub.eu1.edge.siemens.cloud/#/documentation)
-  - [Industrial Edge Forum](https://www.siemens.com/industrial-edge-forum)
-  - [Industrial Edge landing page](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/simatic-edge.html)
-  
+You can find further documentation and help in the following links:
+
+* [Industrial Edge Hub](https://iehub.eu1.edge.siemens.cloud/#/documentation)
+* [Industrial Edge Forum](https://www.siemens.com/industrial-edge-forum)
+* [Industrial Edge landing page](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/simatic-edge.html)
+* [Industrial Edge GitHub page](https://github.com/industrial-edge)
+
 ## Contribution
 
 Thank you for your interest in contributing. Anybody is free to report bugs, unclear documentation, and other problems regarding this repository in the Issues section.
@@ -91,4 +94,3 @@ If you are interested in contributing via Pull Request, please check the [Contri
 ## Licence and Legal Information
 
 Please read the [Legal information](LICENSE.md).
-
