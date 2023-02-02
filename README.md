@@ -67,12 +67,12 @@ You can find further information about the following steps in the [Configuration
 
 - [Configure Data Service](/docs/Installation.md#configure-data-service)
 - [Configure Performance Insight](/docs/Installation.md#configure-performance-insight)
-- [Display OEE dashboard](/docs/Installation.md#display-oee-dashboard)
 
 ## Usage
 
-Once the Data Service app is configured and data is availalbe from a running PLC, process data can be collected.
-Performance Insight visualises this data in an OEE dashboard.
+Once the OEE configuration is done and the PLC delivers data, the OEE dashboard is automatically generated within Performance Insight. Go to 'My Plant' and select the asset 'OEE Data'. Click on the OEE dashboard to open the view. Please be aware to select a proper time range for the dashboard view, that contains useful process data.
+
+![OEEDashboard](/docs/graphics/OEEDashboard.png)
 
 ## Documentation
 

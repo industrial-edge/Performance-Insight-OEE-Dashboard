@@ -9,7 +9,7 @@
 
 ## Configure Data Service
 
-The PLC with the running TIA project is connected via the OPC UA connector to our Industrial Edge Device (IED). Within the connector, all necessary tags are configured and deployed.
+The PLC with the running TIA project is connected via the OPC UA connector to the Industrial Edge Device (IED). Within the connector, all necessary tags are configured and deployed.
 
 Now the app Data Service needs to collect and store this data, to further use it within Performance Insight. Make sure the OPC UA connector is activated within the Data Service.
 
@@ -31,7 +31,7 @@ The machine state of a PLC is one of the main parts of the OEE calculation. To c
 
 For the OEE configuration, we need a parameter that represents the 'goodCounts'. Since the PLC is not offering this parameter, we need to calculate it and save it as KPI instance.
 
-Go to 'My Plant' and select the Asset 'OEE Data'. Go to the 'parameter' view and click 'Create new KPI instance'. Create a KPI instance according to this example, assign the operands to the dedicated parameter and set the aggregation to 'Counter'. Safe the KPI instance. 
+Go to 'My Plant' and select the Asset 'OEE Data'. Go to the 'parameter' view and click 'Create new KPI instance'. Create a KPI instance according to this example, assign the operands to the dedicated parameter and set the aggregation to 'Counter'. Save the KPI instance. 
 
 ![KPI](/docs/graphics/KPI.png)
 
