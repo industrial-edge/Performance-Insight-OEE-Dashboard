@@ -20,21 +20,20 @@ This example shows how to use the Industrial Edge App "Performance Insight" with
 
 ### Overview
 
-This document describes how to create a Performance insight OEE analysis dashboard.
 With the key figure of Overall Equipment Effectiveness (OEE), you can calculate the productivity of a plant or its losses and display them transparently using the Gantt widget. The OEE widgets are predefined, only a few parameters have to be defined in the OEE settings.
 
-The overall equipment effectiveness of a plant is defined as the product of the following three factors:
+The OEE of a plant is defined as the product of the following three factors:
 - Availability factor (e.g. whether there are fault times)
 - Performance factor (e.g. whether the system is running at full load or reduced load)
 - Quality factor (e.g. how much scrap is produced)
 
-<p align="center"><kbd><img src="docs/graphics/Overview.PNG" /></kbd></p>
+![Overview](/docs/graphics/Overview.PNG)
 
 ### General task
 
-This example is a supplement to Performance Insight getting started see [performance-insight-getting-started](https://github.com/industrial-edge/performance-insight-getting-started).
-For the Performance Insight OEE analysis, [this](#tia-project) TIA project is required.
-In Performance Insight, the OEE analysis settings are configured and then displayed as a dashboard.
+This document describes how to create an OEE analysis dashboard within Performance Insight. The OEE settings are configured based on [this](#tia-project) TIA project and then displayed as a dashboard.
+
+This HowTo is a supplement to [Performance Insight getting started](https://github.com/industrial-edge/performance-insight-getting-started).
 
 ## Requirements
 
