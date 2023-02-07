@@ -27,13 +27,15 @@ The OEE of a plant is defined as the product of the following three factors:
 - Performance factor (e.g. whether the system is running at full load or reduced load)
 - Quality factor (e.g. how much scrap is produced)
 
-![Overview](/docs/graphics/Overview.PNG)
+![Overview](/docs/graphics/Overview.png)
 
 ### General task
 
 This document describes how to create an OEE analysis dashboard within Performance Insight. The OEE settings are configured based on [this](#tia-project) TIA project and then displayed as a dashboard.
 
 This HowTo is a supplement to [Performance Insight getting started](https://github.com/industrial-edge/performance-insight-getting-started).
+
+![OEEDashboard](/docs/graphics/OEEDashboard.png)
 
 ## Requirements
 
@@ -72,7 +74,7 @@ You can find further information about the following steps in the [Configuration
 
 Once the OEE configuration is done and the PLC delivers data, the OEE dashboard is automatically generated within Performance Insight. Go to 'My Plant' and select the asset 'OEE Data'. Click on the OEE dashboard to open the view. Please be aware to select a proper time range for the dashboard view, that contains useful process data.
 
-![OEEDashboard](/docs/graphics/OEEDashboard.png)
+![OEE_MachineState](/docs/graphics/OEE_MachineState.png)
 
 ## Documentation
 
