@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "app": "PerformanceInsight",
+  "exportType": "statusMapping",
+  "creationDate": "2023-02-08T09:24:45.841Z",
+  "name": "TankApplication",
+  "description": null,
+  "statusConfiguration": [
+    {
+      "color": "#006FE6",
+      "value": 1,
+      "label": "filling tank",
+      "description": null,
+      "timeCategoryId": 4
+    },
+    {
+      "color": "#A562E7",
+      "value": 2,
+      "label": "heating tank",
+      "description": null,
+      "timeCategoryId": 4
+    },
+    {
+      "color": "#FFC800",
+      "value": 3,
+      "label": "filling bottle",
+      "description": null,
+      "timeCategoryId": 4
+    },
+    {
+      "color": "#65C728",
+      "value": 4,
+      "label": "shifting bottle",
+      "description": null,
+      "timeCategoryId": 4
+    },
+    {
+      "color": "#EB780A",
+      "value": 5,
+      "label": "stop",
+      "description": null,
+      "timeCategoryId": 3
+    },
+    {
+      "color": "#ABB0C3",
+      "value": 6,
+      "label": "reset",
+      "description": null,
+      "timeCategoryId": 3
+    },
+    {
+      "color": "#F62447",
+      "value": 7,
+      "label": "error",
+      "description": null,
+      "timeCategoryId": 5
+    }
+  ],
+  "useTimeCategories": true
+}
