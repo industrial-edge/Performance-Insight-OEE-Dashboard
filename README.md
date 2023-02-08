@@ -29,6 +29,8 @@ The OEE of a plant is defined as the product of the following three factors:
 
 ![Overview](/docs/graphics/Overview.png)
 
+You can create an OEE dashboard for each asset. The dashboard is created automatically on the basis of the settings made by you. With the configuration, several OEE-KPIs are generated and displayed in the OEE dashboard.
+
 ### General task
 
 This document describes how to create an OEE analysis dashboard within Performance Insight. The OEE settings are configured based on [this](#tia-project) TIA project and then displayed as a dashboard.
@@ -72,7 +74,21 @@ You can find further information about the following steps in the [Configuration
 
 ## Usage
 
-Once the OEE configuration is done and the PLC delivers data, the OEE dashboard is automatically generated within Performance Insight. Go to 'My Plant' and select the asset 'OEE Data'. Click on the OEE dashboard to open the view. Please be aware to select a proper time range for the dashboard view, that contains useful process data.
+Once the OEE configuration is done, the dashboard is automatically created underneath the dedicated asset. Go to 'My Plant' and select the asset 'OEE Data'. Click on the 'OEE' dashboard to open the view. Please be aware to select a proper time period for displaying the dashboard, that contains useful process data.
+
+The OEE dashboard offers the following possibilities:
+- Quick overview of KPIs and machine status
+- Detail view for KPIs and machine status
+- Adjustable displayed period
+- Exporting data
+- Access to the OEE settings
+- Display of errors that occurred during the analysis
+
+The dashboard shows the OEE-KPIs as pie charts. The limits are pre-defined but can be adjusted for each KPI. To visualize the interaction of the KPIs in a diagram, click 'Details'.
+
+![OEE_KPIs](/docs/graphics/OEE_KPIs.png)
+
+In the 'Machine State' view, the Gantt widget shows an overview of the individual machine statuses and a summary. Only the variables that have a value are displayed. Click 'Details' to also see the machine state as time model or table view.
 
 ![OEE_MachineState](/docs/graphics/OEE_MachineState.png)
 
