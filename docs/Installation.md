@@ -27,6 +27,8 @@ The machine state of a PLC is one of the main parts of the OEE calculation. To c
 
 ![StatusMapping](/docs/graphics/StatusMapping.png)
 
+The export of this status mapping can be downloaded [here](/src/StatusMapping.json).
+
 ### Create KPI goodCount
 
 For the OEE configuration, we need a parameter that represents the 'goodCounts'. Since the PLC is not offering this parameter, we need to calculate it and save it as KPI instance.
@@ -44,7 +46,7 @@ Therefore go to 'My Plant' and select the Asset 'OEE Data'. Click 'Add dashboard
 - select the previously created status mapping
 - select a parameter that represents the machine status
 - link the operand 'TotalCount' to the dedicated parameter and set the aggregation to 'Counter'
-- link the operand 'TheroreticalSpeed' to a fixed number that represents the speed of your production in pcs/s
+- link the operand 'TheroreticalSpeed' to a fixed number that represents the speed of your production in pcs/s (here the value 0,18 roughly reflects the speed of the simulated tank application)
 - link the operand 'GoodCount' to the previously created KPI instance
 - save the configuration
 

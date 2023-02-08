@@ -45,7 +45,6 @@ This HowTo is a supplement to [Performance Insight getting started](https://gith
 
 - Access to an Industrial Edge Management System (IEM)
 - Onboarded Industial Edge Device on IEM
-- Performance Insight getting started [performance-insight-getting-started](https://github.com/industrial-edge/performance-insight-getting-started)
 - Google Chrome (Version ≥ 72)
 
 ### Used components
