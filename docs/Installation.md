@@ -23,7 +23,13 @@ Then create a new asset with the following variables:
 
 ### Create status mapping
 
-The machine state of a PLC is one of the main parts of the OEE calculation. To correctly map this data, you need to create a status mapping within Performance Insight. All time categories (Net Production Time, Planned Downtime, Unplanned Downtime) must be covered by the mapping. Go to 'Configuration' > 'Status mappings' and create a new status mapping according to this example:
+The machine state of a PLC is one of the main parts of the OEE calculation. To correctly map this data, you need to create a status mapping within Performance Insight. 
+
+All time categories (Net Production Time, Planned Downtime, Unplanned Downtime) must be covered by the mapping.
+
+![OEE_Times](/docs/graphics/OEE_Times.png)
+
+Go to 'Configuration' > 'Status mappings' and create a new status mapping according to this example:
 
 ![StatusMapping](/docs/graphics/StatusMapping.png)
 
