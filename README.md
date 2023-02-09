@@ -7,7 +7,7 @@ This example shows how to use the Industrial Edge App "Performance Insight" with
     - [Overview](#overview)
     - [General task](#general-task)
   - [Requirements](#requirements)
-    - [Prerequisities](#prerequisities)
+    - [Prerequisites](#prerequisites)
     - [Used components](#used-components)
     - [TIA Project](#tia-project)
   - [Configuration](#configuration)
@@ -41,7 +41,7 @@ This HowTo is a supplement to [Performance Insight getting started](https://gith
 
 ## Requirements
 
-### Prerequisities
+### Prerequisites
 
 - Access to an Industrial Edge Management System (IEM)
 - Onboarded Industial Edge Device on IEM
@@ -62,7 +62,7 @@ This HowTo is a supplement to [Performance Insight getting started](https://gith
 
 ### TIA Project
 
-The used TIA Portal project can be found in the [miscellenous repository](https://github.com/industrial-edge/miscellaneous/tree/main/tank%20application) and is also used for several further application examples.
+The used TIA Portal project can be found in the [miscellaneous repository](https://github.com/industrial-edge/miscellaneous/tree/main/tank%20application) and is also used for several further application examples.
 
 ## Configuration
 
