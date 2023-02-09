@@ -3,62 +3,59 @@
 - [Configuration](#configuration)
   - [Configure Data Service](#configure-data-service)
   - [Configure Performance Insight](#configure-performance-insight)
-    - [Configure status mapping](#configure-status-mapping)
-    - [Configure KPI types](#configure-kpi-types)
-    - [Configure Parameter](#configure-parameter)
-    - [Configure OEE settings](#configure-oee-settings)
-  - [Display OEE dashboard](#display-oee-dashboard)
+    - [Create status mapping](#create-status-mapping)
+    - [Create KPI goodCount](#create-kpi-goodcount)
+    - [Create OEE dashboard](#create-oee-dashboard)
 
 ## Configure Data Service
 
-Create a new asset with the following variables in the Data Service to collect all needed data.
+The PLC with the running TIA project is connected via the OPC UA connector to the Industrial Edge Device (IED). Within the connector, all necessary tags are configured and deployed.
 
-<p align="center"><kbd><img src="graphics/Data_Service_Variables.PNG" /></kbd></p>
+Now the app Data Service needs to collect and store this data, to further use it within Performance Insight. Make sure the OPC UA connector is activated within the Data Service.
+
+![Connector](/docs/graphics/Connector.png)
+
+Then create a new asset with the following variables:
+
+![Variables](/docs/graphics/Variables.png)
 
 ## Configure Performance Insight
 
-### Configure status mapping
+### Create status mapping
 
-Open the Performance Insight status mapping and create a new status mapping which is needed later for the OEE settings.
+The machine state of a PLC is one of the main parts of the OEE calculation. To correctly map this data, you need to create a status mapping within Performance Insight. 
 
-<p align="center"><kbd><img src="graphics/Performance_Insight_machine_status.PNG" /></kbd></p>
+All time categories (Net Production Time, Planned Downtime, Unplanned Downtime) must be covered by the mapping.
 
-### Configure KPI types
+![OEE_Times](/docs/graphics/OEE_Times.png)
 
-Create two new KPI types to calculate the "theoretical speed" and the "good count", which are later needed to define parameters in the OEE settings.
+Go to 'Configuration' > 'Status mappings' and create a new status mapping according to this example:
 
-<p align="center"><kbd><img src="graphics/Performance_Insight_KPI_theoretical_speed.PNG" /></kbd></p>
+![StatusMapping](/docs/graphics/StatusMapping.png)
 
-<p align="center"><kbd><img src="graphics/Performance_Insight_KPI_good_count.PNG" /></kbd></p>
+The export of this status mapping can be downloaded [here](/src/StatusMapping.json).
 
-### Configure Parameter
+### Create KPI goodCount
 
-Open the parameters in the respective asset and create two new KPI instances for "theoretical speed" and "good count".
+For the OEE configuration, we need a parameter that represents the 'goodCounts'. Since the PLC is not offering this parameter, we need to calculate it and save it as KPI instance.
 
-<p align="center"><kbd><img src="graphics/Performance_Insight_parameter_good_count.PNG" /></kbd></p>
+Go to 'My Plant' and select the Asset 'OEE Data'. Go to the 'parameter' view and click 'Create new KPI instance'. Create a KPI instance according to this example, assign the operands to the dedicated parameter and set the aggregation to 'Counter'. Save the KPI instance. 
 
-<p align="center"><kbd><img src="graphics/Performance_Insight_parameter_theoretical_speed.PNG" /></kbd></p>
+![KPI](/docs/graphics/KPI.png)
 
-### Configure OEE settings
+### Create OEE dashboard
 
-Open Asset Configuration in the respective asset and define OEE settings.
+After we have prepared all necessary input data, we can create the OEE dashboard.
 
-<p align="center"><kbd><img src="graphics/Performance_Insight_Asset_Configuration.PNG" /></kbd></p>
+Therefore go to 'My Plant' and select the Asset 'OEE Data'. Click 'Add dashboard' and then 'OEE dashboard'. Within the OEE configuration window, proceed as following:
 
-<p align="center"><kbd><img src="graphics/Performance_Insight_define_OEE_settings.PNG" /></kbd></p>
+- select the previously created status mapping
+- select a parameter that represents the machine status
+- link the operand 'TotalCount' to the dedicated parameter and set the aggregation to 'Counter'
+- link the operand 'TheroreticalSpeed' to a fixed number that represents the speed of your production in pcs/s (here the value 0,18 roughly reflects the speed of the simulated tank application)
+- link the operand 'GoodCount' to the previously created KPI instance
+- save the configuration
 
-- Select the created machine status as status mapping
+![OEEConfig](/docs/graphics/OEEConfig.png)
 
-- Select the machine status variable "GDB_operate_machineState"
-
-- Select the respective variables and created KPI types
-
-- Click on save
- 
-<p align="center"><kbd><img src="graphics/Performance_Insight_OEE_settings.PNG" /></kbd></p>
-
-## Display OEE dashboard
-
-Open your asset in which the OEE settings have been made and select the tab "OEE". Choose a proper time range within the dashboard for which data is definitely available.
-
-<p align="center"><kbd><img src="graphics/Performance_Insight_OEE_Dashboard.PNG" /></kbd></p>
+Now the dashboard is automatically created and can be used. Please find more information in the [Usage](/README.md#usage) chapter.
