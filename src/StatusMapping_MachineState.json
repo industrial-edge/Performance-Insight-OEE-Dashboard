@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "app": "PerformanceInsight",
+  "exportType": "statusMapping",
+  "creationDate": "2025-08-27T09:37:21.418Z",
+  "name": "MachineState",
+  "description": "reason tree used",
+  "statusConfiguration": [
+    {
+      "color": "#65C728",
+      "value": 1,
+      "label": "Production",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "4"
+    },
+    {
+      "color": "#ABB0C3",
+      "value": 2,
+      "label": "Planned Downtime",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "3"
+    },
+    {
+      "color": "#F62447",
+      "value": 3,
+      "label": "Unplanned Downtime",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#AF235F",
+      "value": 4,
+      "label": "Bottle in wrong position",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#641946",
+      "value": 5,
+      "label": "Cracked bottle detected",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#8068E7",
+      "value": 6,
+      "label": "No bottle on the conveyor",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#70009C",
+      "value": 7,
+      "label": "Wrong bottle detected",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#5814DB",
+      "value": 8,
+      "label": "Conveyor malfunction",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#A562E7",
+      "value": 9,
+      "label": "Filler malfunction",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#DDA2DD",
+      "value": 10,
+      "label": "Valve blocked",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#50BED7",
+      "value": 11,
+      "label": "No flow in main pipe",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#006FE6",
+      "value": 12,
+      "label": "Generic error: Check PLC buffer",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#0091CF",
+      "value": 13,
+      "label": "Generic error: Check alarm buffer",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#00646E",
+      "value": 14,
+      "label": "Generic error: Contact with supplier",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    }
+  ],
+  "useTimeCategories": true
+}
