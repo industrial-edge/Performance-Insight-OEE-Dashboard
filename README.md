@@ -1,6 +1,6 @@
 # Performance Insight OEE analysis
 
-This example shows how to use the Industrial Edge App Performance Insight with it´s embedded OEE dashboard to present the productivity of a plant transparently. In addition it explains the optional views *error analysis* and *analysis of sub assets* and shows how to use the reason tree.
+This application example demonstrates how to use the OEE dashboard within the app Performance Insight to present the productivity of a plant transparently.
 
 - [Performance Insight OEE analysis](#performance-insight-oee-analysis)
   - [Description](#description)
@@ -39,7 +39,7 @@ Using the out-of-the-box OEE dashboard within Performance Insight, these values 
 
 ### General task
 
-This repository describes how to create an OEE analysis dashboard within Performance Insight. It also gives insights into the embedded error analysis, analysis of sub assets and the reason tree functionality.  
+This repository describes how to create an OEE analysis dashboard within Performance Insight. It also gives insights into the embedded error analysis, analysis of sub assets and the reason tree functionality.
 
 Please visit [Performance Insight getting started](https://github.com/industrial-edge/performance-insight-getting-started) to discover the basics of the app.
 
@@ -74,7 +74,7 @@ This application example is based on the [tank application](https://github.com/i
 
 ## Configuration
 
-You can find further information about the following steps in the [Configuration](/docs/Installation.md) documentation:
+You can find detailled information about the following steps in the [Configuration](/docs/Installation.md) documentation:
 
 - [Configure IIH Essentials](/docs/Installation.md#configure-data-service)
 - [Configure Performance Insight](/docs/Installation.md#configure-performance-insight)

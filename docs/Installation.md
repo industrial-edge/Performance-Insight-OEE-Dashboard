@@ -11,11 +11,17 @@
 
 The PLC with the running TIA project is connected via the OPC UA connector to the Industrial Edge Device (IED). Within the connector, all necessary tags are configured and deployed.
 
-Now the app IIH Essentials needs to collect and store this data, to further use it within Performance Insight. Make sure the OPC UA Connector is activated within IIH Essentials.
+Now the app IIH Essentials needs to collect and store this data, to further use it within Performance Insight.
+
+- Make sure the OPC UA Connector is activated within IIH Essentials
 
 ![Connector](/docs/graphics/Connector.png)
 
-Add the following PLC attributes to a new or existing asset:
+- Add the following PLC attributes to a new or existing asset:
+  - *GDB.operate.machineStateOEE*
+  - *GDB.process.numberGood*
+  - *GDB.process.numberProduced*
+  - *GDB.signals.errorCode*
 
 ![Variables](/docs/graphics/Variables.png)
 
@@ -23,13 +29,10 @@ Add the following PLC attributes to a new or existing asset:
 
 ## Configure Reason Tree
 
-The reason tree defines single error states that are mapped to one of these time categories:
+The reason tree defines single error states that are mapped to one of the three main time categories (Production time / Planned downtime / Unplanned downtime).
 
-- Production time
-- Planned downtime
-- Unplanned downtime
-
-Go to *Configuration* > *Reason Tree* and configure it according to this example:
+- Go to *Configuration* > *Reason Tree*
+- Configure it according to this example:
 
 ![ReasonTreeConfig](/docs/graphics/ReasonTreeConfig.png)
 
@@ -49,7 +52,8 @@ The machine state of the plant is madatory for calculating the OEE values. You n
 
 ![OEE_Times](/docs/graphics/OEE_Times.png)
 
-Go to *Configuration* > *Status mappings* and create a new status mapping according to this example:
+- Go to *Configuration* > *Status mappings*
+- Create a new status mapping according to this example:
 
 ![StatusMappingMachineState](/docs/graphics/StatusMapping_MachineState.png)
 
@@ -59,29 +63,41 @@ The export of this status mapping can be downloaded [here](/src/StatusMapping_Ma
 
 For using the embedded OEE function *error analysis* you need an additional status mapping for the error codes.
 
-Go to *Configuration* > *Status mappings* and create a new status mapping according to this example:
+- Go to *Configuration* > *Status mappings*
+- Create a new status mapping according to this example:
 
 ![StatusMappingErrorCode](/docs/graphics/StatusMapping_ErrorCode.png)
 
 The export of this status mapping can be downloaded [here](/src/StatusMapping_ErrorCode.json) for using the function *Import status mapping*.
 
-
------> HIER WEITER
-
-
 ### Create OEE dashboard
 
-After we have prepared all necessary input data, we can create the OEE dashboard.
+After preparing all necessary input data, you can configure the OEE dashboard.
 
-Therefore go to 'My Plant' and select the Asset 'OEE Data'. Click 'Add dashboard' and then 'OEE dashboard'. Within the OEE configuration window, proceed as following:
+- Go to *My Plant* and select the dedicated asset
+- Click *Add dashboard* > *OEE dashboard*
 
-- select the previously created status mapping
-- select a parameter that represents the machine status
-- link the operand 'TotalCount' to the dedicated parameter and set the aggregation to 'Counter'
-- link the operand 'TheroreticalSpeed' to a fixed number that represents the speed of your production in pcs/s (here the value 0,18 roughly reflects the speed of the simulated tank application)
-- link the operand 'GoodCount' to the previously created KPI instance
-- save the configuration
+The OEE configuration opens. Set the configuration as following:
+
+Section 1:
+- *Machine status variable* = parameter *GDB.operate.machineStateOEE* (representing the machine state)
+- *Status assignment* = status mapping *MachineState*
+
+Section 2:
+- *Error status variable* = *GDB.signals.errorCode* (representing the error status)
+- *Status assignment* = status mapping *ErrorCode*
+
+Section 4:
+- *TotalCount* = parameter *GDB.process.numberProduced*; set the aggregation to *Counter*
+- *TheoreticalSpeed* = 2500 pcs/h (representing the speed of production)
+- *GoodCount* = parameter *GDB.process.numberGood*; set the aggregation to *Counter*
+
+All other fields are prefilled an must not be adapted.
+
+- Save the configuration
 
 ![OEEConfig](/docs/graphics/OEEConfig.png)
 
-Now the dashboard is automatically created and can be used. Please find more information in the [Usage](/README.md#usage) chapter.
+Now the dashboard is automatically created and can be used.
+
+See the chapter [Usage](/README.md#usage) to discover further information.
