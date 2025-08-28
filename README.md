@@ -32,14 +32,15 @@ It combines these three factors into a percentage value:
 
 ![Overview](/docs/graphics/Overview.png)
 
-The OEE value and it's dedicated KPIs represents the productivity of a plant.  
+The OEE value and it's dedicated KPIs represents the productivity of a plant. 
+
 Using the out-of-the-box OEE dashboard within Performance Insight, these values are displayed transparently. The dashboard can easily be configured with only a view parameter settings. You can create one OEE dashboard per asset.  
 
 ![OEEDashboard](/docs/graphics/OEEDashboard.png)
 
 ### General task
 
-This repository describes how to create an OEE analysis dashboard within Performance Insight. It also gives insights into the embedded error analysis, analysis of sub assets and the reason tree functionality.
+This repository describes how to create an OEE dashboard within Performance Insight. It also gives insights into the embedded error analysis, analysis of sub assets and the reason tree functionality.
 
 Please visit [Performance Insight getting started](https://github.com/industrial-edge/performance-insight-getting-started) to discover the basics of the app.
 
@@ -83,7 +84,7 @@ You can find detailled information about the following steps in the [Configurati
 
 Once the OEE configuration is done, the dashboard is automatically created underneath the dedicated asset. Go to *My Plant* and select the asset. Click on the *OEE* dashboard to open the view. Please be aware to select a proper time period for displaying the dashboard, that contains useful process data.
 
-The OEE dashboard offers the following possibilities:
+The OEE dashboard offers the following views:
 - OEE overview:
   - Quick overview of KPIs and machine status
   - Detail view for KPIs and machine status
@@ -98,7 +99,7 @@ The OEE overview shows the current OEE KPI values according to the selected dash
 
 ![OEE_overview](/docs/graphics/OEE_overview.png)
 
-Furthermore, the machine status is displayed as Gantt widget including all the occured states. The Distribution area shows the overall duration of each state for the selected time period. 
+Furthermore, the machine status is displayed as Gantt widget including all the occured states. The *Distribution* area shows the overall duration of each state for the selected time period. 
 
 Click *Details* to also see the machine state as *Time model* or *Table* view.
 
@@ -115,11 +116,11 @@ The reason tree is based on the specified time categories:
 - Planned downtime (Planned downtime, e.g. maintenance)
 - Unplanned downtime (Unplanned downtime, e.g. machine fault, material shortage)
 
-Each reason belongs to one of these time categories.
+Each reason is assigned to one of these time categories.
 
 ![ReasonTreeConfig](/docs/graphics/ReasonTreeConfigSnipped.png)
 
-In this example the reason tree was configured and applied in the status mapping configuration. This status mapping finally was selected when configuring the OEE dashboard.
+As soon as the reason tree was configured and used in the status mapping of the machine state, it can be used for detailed error analysis:
 
 Within the OEE dashboard open the *Details* of the *Machine status* section and select the *Time model* view. It shows an overview of the time categories used and provides the option to drill down these main categories to identify the single reasons. Now it is possible to analyse how long an single error was pending.
 

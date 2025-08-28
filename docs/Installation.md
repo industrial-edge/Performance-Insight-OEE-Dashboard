@@ -57,7 +57,7 @@ The machine state of the plant is madatory for calculating the OEE values. You n
 
 ![StatusMappingMachineState](/docs/graphics/StatusMapping_MachineState.png)
 
-The export of this status mapping can be downloaded [here](/src/StatusMapping_MachineState.json) for using the function *Import status mapping*.
+The export of this status mapping can be downloaded [here](/src/MachineState.json) for using the function *Import status mapping*.
 
 **Status mapping for error state**
 
@@ -68,7 +68,7 @@ For using the embedded OEE function *error analysis* you need an additional stat
 
 ![StatusMappingErrorCode](/docs/graphics/StatusMapping_ErrorCode.png)
 
-The export of this status mapping can be downloaded [here](/src/StatusMapping_ErrorCode.json) for using the function *Import status mapping*.
+The export of this status mapping can be downloaded [here](/src/ErrorCode.json) for using the function *Import status mapping*.
 
 ### Create OEE dashboard
 
