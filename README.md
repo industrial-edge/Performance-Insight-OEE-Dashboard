@@ -1,6 +1,6 @@
 # Performance Insight OEE analysis
 
-This example shows how to use the Industrial Edge App "Performance Insight" with it´s embedded OEE dashboard to present the productivity of a plant transparently.
+This application example demonstrates how to use the OEE dashboard within the app Performance Insight to present the productivity of a plant transparently.
 
 - [Performance Insight OEE analysis](#performance-insight-oee-analysis)
   - [Description](#description)
@@ -12,6 +12,9 @@ This example shows how to use the Industrial Edge App "Performance Insight" with
     - [TIA Project](#tia-project)
   - [Configuration](#configuration)
   - [Usage](#usage)
+    - [OEE overview](#oee-overview)
+    - [Error analysis](#error-analysis)
+    - [Analysis of sub assets](#analysis-of-sub-assets)
   - [Documentation](#documentation)
   - [Contribution](#contribution)
   - [Licence and Legal Information](#licence-and-legal-information)
@@ -20,76 +23,120 @@ This example shows how to use the Industrial Edge App "Performance Insight" with
 
 ### Overview
 
-With the key figure of Overall Equipment Effectiveness (OEE), you can calculate the productivity of a plant or its losses and display them transparently using the Gantt widget. The OEE widgets are predefined, only a few parameters have to be defined in the OEE settings.
+**OEE (Overall Equipment Effectiveness)** is the key production metric for measuring overall equipment effectiveness of a production.   
 
-The OEE of a plant is defined as the product of the following three factors:
-- Availability factor (e.g. whether there are fault times)
-- Performance factor (e.g. whether the system is running at full load or reduced load)
-- Quality factor (e.g. how much scrap is produced)
+It combines these three factors into a percentage value:   
+- **Availability** (equipment uptime, e.g. whether there are fault times)
+- **Performance** (production speed, e.g. whether the system is running at full load or reduced load)
+- **Quality** (good parts, e.g. how much scrap is produced) 
 
 ![Overview](/docs/graphics/Overview.png)
 
-You can create an OEE dashboard for each asset. The dashboard is created automatically on the basis of the settings made by you. With the configuration, several OEE-KPIs are generated and displayed in the OEE dashboard.
+The OEE value and it's dedicated KPIs represents the productivity of a plant. 
+
+Using the out-of-the-box OEE dashboard within Performance Insight, these values are displayed transparently. The dashboard can easily be configured with only a view parameter settings. You can create one OEE dashboard per asset.  
+
+![OEEDashboard](/docs/graphics/OEEDashboard.png)
 
 ### General task
 
-This document describes how to create an OEE analysis dashboard within Performance Insight. The OEE settings are configured based on [this](#tia-project) TIA project and then displayed as a dashboard.
+This repository describes how to create an OEE dashboard within Performance Insight. It also gives insights into the embedded error analysis, analysis of sub assets and the reason tree functionality.
 
-This HowTo is a supplement to [Performance Insight getting started](https://github.com/industrial-edge/performance-insight-getting-started).
-
-![OEEDashboard](/docs/graphics/OEEDashboard.png)
+Please visit [Performance Insight getting started](https://github.com/industrial-edge/performance-insight-getting-started) to discover the basics of the app.
 
 ## Requirements
 
 ### Prerequisites
 
 - Access to an Industrial Edge Management System (IEM)
-- Onboarded Industial Edge Device on IEM
-- Google Chrome (Version ≥ 72)
+- Onboarded Industial Edge Device (IED) on IEM
+- IED connected to PLC
+- TIA Portal project loaded on PLC
+- HTML5-capable Internet browser (e.g. Google Chrome)
 
 ### Used components
 
-- Industrial Edge Management (IEM) V1.5.2-4 / V1.10.3
-  - IE Databus V 1.8.2-2
-  - IE Databus Configurator V 1.8.2-2
-  - OPC UA Connector V 1.8.1-6
-  - Common Connector Configurator V 1.8.1-4
-  - Data Service V 1.5.0
-  - Performance Insight V 1.6.2
-- Industrial Edge Device V 1.9.0-27
-- TIA Portal V16
-- CPU 1511-1 PN
+- Industrial Edge Management (IEM) V1.11.7
+- Industrial Edge Device V3.0.0
+- Management applications:
+  - Databus Configurator V3.2.0
+  - Common Connector Configurator V2.0.0
+- Device applications:
+  - Databus V3.1.0
+  - OPC UA Connector V2.4.0
+  - Common Configurator V2.2.0
+  - IIH Essentials V2.2.0
+  - Performance Insight V1.21.1
+- TIA Portal V19
 
 ### TIA Project
 
-The used TIA Portal project can be found in the [miscellaneous repository](https://github.com/industrial-edge/miscellaneous/tree/main/tank%20application) and is also used for several further application examples.
+This application example is based on the [tank application](https://github.com/industrial-edge/miscellaneous/tree/main/tank%20application) TIA Portal project.
 
 ## Configuration
 
-You can find further information about the following steps in the [Configuration](/docs/Installation.md) documentation:
+You can find detailled information about the following steps in the [Configuration](/docs/Installation.md) documentation:
 
-- [Configure Data Service](/docs/Installation.md#configure-data-service)
+- [Configure IIH Essentials](/docs/Installation.md#configure-data-service)
 - [Configure Performance Insight](/docs/Installation.md#configure-performance-insight)
 
 ## Usage
 
-Once the OEE configuration is done, the dashboard is automatically created underneath the dedicated asset. Go to 'My Plant' and select the asset 'OEE Data'. Click on the 'OEE' dashboard to open the view. Please be aware to select a proper time period for displaying the dashboard, that contains useful process data.
+Once the OEE configuration is done, the dashboard is automatically created underneath the dedicated asset. Go to *My Plant* and select the asset. Click on the *OEE* dashboard to open the view. Please be aware to select a proper time period for displaying the dashboard, that contains useful process data.
 
-The OEE dashboard offers the following possibilities:
-- Quick overview of KPIs and machine status
-- Detail view for KPIs and machine status
-- Adjustable displayed period
-- Exporting data
-- Access to the OEE settings
-- Display of errors that occurred during the analysis
+The OEE dashboard offers the following views:
+- OEE overview:
+  - Quick overview of KPIs and machine status
+  - Detail view for KPIs and machine status
+- Error analysis (optional):
+  - Overview of the most common errors
+- Analysis of sub assets (optional):
+  - Overview of machine states and OEE KPIs of all configured sub assets 
 
-The dashboard shows the OEE-KPIs as pie charts. The limits are pre-defined but can be adjusted for each KPI. To visualize the interaction of the KPIs in a diagram, click 'Details'.
+### OEE overview
 
-![OEE_KPIs](/docs/graphics/OEE_KPIs.png)
+The OEE overview shows the current OEE KPI values according to the selected dashboard time range. The KPI formulas as well as the limits are pre-defined but can be adjusted for each KPI. To visualize the interaction of the KPIs in a diagram, click *Details*.
 
-In the 'Machine State' view, the Gantt widget shows an overview of the individual machine statuses and a summary. Only the variables that have a value are displayed. Click 'Details' to also see the machine state as time model or table view.
+![OEE_overview](/docs/graphics/OEE_overview.png)
+
+Furthermore, the machine status is displayed as Gantt widget including all the occured states. The *Distribution* area shows the overall duration of each state for the selected time period. 
+
+Click *Details* to also see the machine state as *Time model* or *Table* view.
 
 ![OEE_MachineState](/docs/graphics/OEE_MachineState.png)
+
+**Reason tree**  
+
+Within the *Time model* view, you can use the reason tree functionality.
+
+The reason tree is a detailed representation of the different error states in which a machine or plant can be. Within the OEE dashboard, this configuration can be used to analyse the reason of downtimes in a more fine granular way. 
+
+The reason tree is based on the specified time categories:
+- Production time (Net production time)
+- Planned downtime (Planned downtime, e.g. maintenance)
+- Unplanned downtime (Unplanned downtime, e.g. machine fault, material shortage)
+
+Each reason is assigned to one of these time categories.
+
+![ReasonTreeConfig](/docs/graphics/ReasonTreeConfigSnipped.png)
+
+As soon as the reason tree was configured and used in the status mapping of the machine state, it can be used for detailed error analysis:
+
+Within the OEE dashboard open the *Details* of the *Machine status* section and select the *Time model* view. It shows an overview of the time categories used and provides the option to drill down these main categories to identify the single reasons. Now it is possible to analyse how long an single error was pending.
+
+![OEETimeModel](/docs/graphics/OEE_TimeModel.png)
+
+### Error analysis
+
+The embedded *Error analysis* view can be used as soon as the dedicated OEE configuration (error status variable and corresponding status mapping) was done. It shows the most frequently occuring errors and the error distribution. You can sort the top errors either by duration or by amount.
+
+![OEEErrorAnalysis](/docs/graphics/OEE_ErrorAnalysis.png)
+
+### Analysis of sub assets
+
+The embedded *Analysis of sub assets* view can be used as soon as there are sub assets with at least one configured OEE dashboard. It shows an overview of the machine states of that line (Gantt chart) and also displays the main OEE KPIs (OEE, Availability, Performance, Quality) for each sub asset. To switch into one of the underlaying OEE dashboards you can click on *Details* of an asset.
+
+![OEEAnalysisSubAssets](/docs/graphics/OEE_AnalysisSubAssets.png)
 
 ## Documentation
 

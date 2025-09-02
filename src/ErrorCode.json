@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "app": "PerformanceInsight",
+  "exportType": "statusMapping",
+  "creationDate": "2025-08-27T09:55:48.050Z",
+  "name": "ErrorCode",
+  "description": "",
+  "statusConfiguration": [
+    {
+      "color": "#65C728",
+      "value": 8000,
+      "label": "No error",
+      "description": null,
+      "excluded": true,
+      "timeCategoryId": "4"
+    },
+    {
+      "color": "#00646E",
+      "value": 8001,
+      "label": "Bottle in wrong position",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#FFB900",
+      "value": 8002,
+      "label": "Cracked bottle detected",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#EB780A",
+      "value": 8003,
+      "label": "No bottle on the conveyor",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#8068E7",
+      "value": 8004,
+      "label": "Wrong bottle detected",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#AF235F",
+      "value": 8005,
+      "label": "Conveyor malfunction",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#794934",
+      "value": 8006,
+      "label": "Filler malfunction",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#0091CF",
+      "value": 8007,
+      "label": "Valve blocked",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#AAB414",
+      "value": 8008,
+      "label": "No flow in main pipe",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#879BAA",
+      "value": 8009,
+      "label": "Generic error: check PLC buffer",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#554A50",
+      "value": 8010,
+      "label": "Generic error: check alarm buffer",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    },
+    {
+      "color": "#647D2D",
+      "value": 8011,
+      "label": "Generic error: contact with supplier",
+      "description": null,
+      "excluded": false,
+      "timeCategoryId": "5"
+    }
+  ],
+  "useTimeCategories": true
+}
