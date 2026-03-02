@@ -83,7 +83,7 @@ You can find detailled information about the following steps in the [Configurati
 
 ## Simulation of OEE data
 
-This chapter is optional. If needed, you can simulate all necessary OEE parameters via the app Flow Creator:
+This chapter is optional. If needed, you can simulate all necessary OEE parameters via the app Flow Creator. You can find detailled information in the [Simulate OEE data](/docs/Simulation.md) documentation:
 
 - [Setup Flow Creator](/docs/Simulation.md#setup-flow-creator)
 - [Configure IIH Essentials](/docs/Simulation.md#configure-iih-essentials)
