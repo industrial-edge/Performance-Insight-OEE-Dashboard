@@ -4,7 +4,8 @@
   - [Setup Flow Creator](#setup-flow-creator)
   - [Configure IIH Essentials](#configure-iih-essentials)
 
-With this instruction you can easily simulate some OEE values for using them within an OEE dashboard.
+With this instruction you can easily simulate some OEE values for using them within an OEE dashboard.  
+Therefore it is mandatory to have the app Flow Creator installed on the Edge device.
 
 ## Setup Flow Creator
 
