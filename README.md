@@ -11,6 +11,7 @@ This application example demonstrates how to use the OEE dashboard within the ap
     - [Used components](#used-components)
     - [TIA Project](#tia-project)
   - [Configuration](#configuration)
+  - [Simulation of OEE data](#simulation-of-oee-data)
   - [Usage](#usage)
     - [OEE overview](#oee-overview)
     - [Error analysis](#error-analysis)
@@ -79,6 +80,13 @@ You can find detailled information about the following steps in the [Configurati
 
 - [Configure IIH Essentials](/docs/Installation.md#configure-data-service)
 - [Configure Performance Insight](/docs/Installation.md#configure-performance-insight)
+
+## Simulation of OEE data
+
+This chapter is optional. If needed, you can simulate all necessary OEE parameters via the app Flow Creator. You can find detailled information in the [Simulate OEE data](/docs/Simulation.md) documentation:
+
+- [Setup Flow Creator](/docs/Simulation.md#setup-flow-creator)
+- [Configure IIH Essentials](/docs/Simulation.md#configure-iih-essentials)
 
 ## Usage
 
